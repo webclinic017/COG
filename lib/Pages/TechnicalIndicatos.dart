@@ -781,35 +781,33 @@ class TechnicalIndicatos extends StatelessWidget {
   Padding showWithToolTip({Color tooltipcolor, String text, Color barcolor}) {
     return Padding(
       padding: EdgeInsets.only(left: 0),
-      child: widget(
-              child: SimpleTooltip(
-          minimumOutSidePadding: 5,
-          tooltipTap: () {
-            //print("Tooltip tap");
-          },
-          backgroundColor: tooltipcolor,
-          borderColor: tooltipcolor,
-          maxHeight: 40,
-          minWidth: 90,
-          borderRadius: 4,
-          ballonPadding: EdgeInsets.all(0),
-          animationDuration: Duration(seconds: 1),
-          show: true,
-          tooltipDirection: TooltipDirection.horizontal,
-          arrowLength: 14,
-          arrowBaseWidth: 20,
-          child: Container(
-            height: 60,
-            width: 12,
-            color: barcolor,
-          ),
-          content: Text(
-            text,
-            style: GoogleFonts.ibmPlexSans(
-                color: Colors.black,
-                fontSize: 14,
-                decoration: TextDecoration.none),
-          ),
+      child: SimpleTooltip(
+        minimumOutSidePadding: 5,
+        tooltipTap: () {
+          //print("Tooltip tap");
+        },
+        backgroundColor: tooltipcolor,
+        borderColor: tooltipcolor,
+        maxHeight: 40,
+        minWidth: 90,
+        borderRadius: 4,
+        ballonPadding: EdgeInsets.all(0),
+        animationDuration: Duration(seconds: 1),
+        show: true,
+        tooltipDirection: TooltipDirection.horizontal,
+        arrowLength: 14,
+        arrowBaseWidth: 20,
+        child: Container(
+          height: 60,
+          width: 12,
+          color: barcolor,
+        ),
+        content: Text(
+          text,
+          style: GoogleFonts.ibmPlexSans(
+              color: Colors.black,
+              fontSize: 14,
+              decoration: TextDecoration.none),
         ),
       ),
     );
